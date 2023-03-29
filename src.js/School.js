@@ -12,13 +12,8 @@ School.prototype.getStudentNames = function () {
     console.log(students[i].name);
   }
 };
-
-let Wael = new Student("Wael", 20, 11);
-let Hamdy = new Student("Hamdy", 20, 11);
-let Nidhal = new Student("Nidhal", 20, 11);
-
-let school = new School("bhaier");
-school.addStudent(Hamdy);
-school.addStudent(Wael);
-school.addStudent(Nidhal);
-school.getStudentNames();
+School.prototype.getAverageGrade = function () {
+  for (var i = 0; i < this.students.length; i++) {
+    return this.students[i].grade / this.students.length;
+  }
+};
